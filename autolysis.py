@@ -1,15 +1,13 @@
-__requires__ = """
-# Script dependencies for uv
-requires-python = ">=3.11"
-dependencies = [
-  "httpx",
-  "pandas",
-  "matplotlib",
-  "seaborn",
-  "chardet",
-]
-"""
-
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "httpx",
+#   "pandas",
+#   "matplotlib",
+#   "seaborn",
+#   "chardet" 
+# ]
+# ///
 import os
 import sys
 import pandas as pd
