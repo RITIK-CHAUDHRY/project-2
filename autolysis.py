@@ -1,3 +1,15 @@
+__requires__ = """
+# Script dependencies for uv
+requires-python = ">=3.11"
+dependencies = [
+  "httpx",
+  "pandas",
+  "matplotlib",
+  "seaborn",
+  "chardet",
+]
+"""
+
 import os
 import sys
 import pandas as pd
@@ -16,11 +28,11 @@ def get_api_key():
     api_key = os.environ.get("AIPROXY_TOKEN")
     if not api_key:
         raise EnvironmentError(
-            "Provide your api key to execute operation on dataset . "
-            "Please set it before running the script. Example:\n"
-            "  export AIPROXY_TOKEN='your_actual_api_key' (Linux/Mac)\n"
-            "  set AIPROXY_TOKEN=your_actual_api_key (Windows Command Prompt)\n"
-            "  $env:AIPROXY_TOKEN='your_actual_api_key' (Windows PowerShell)"
+            "Provide your API key to execute operations on the dataset.\n"
+            "Set it using the appropriate command for your OS:\n"
+            "  Linux/Mac: export AIPROXY_TOKEN='your_actual_api_key'\n"
+            "  Windows (Command Prompt): set AIPROXY_TOKEN=your_actual_api_key\n"
+            "  Windows (PowerShell): $env:AIPROXY_TOKEN='your_actual_api_key'"
         )
     return api_key
 
